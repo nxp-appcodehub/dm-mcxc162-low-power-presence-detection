@@ -1,0 +1,52 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2026-08-10T09:24:27Z",
+    "creators": [
+      "Organization: NXP"
+    ],
+    "licenseListVersion": "3.28"
+  },
+  "name": "dm-mcxc162-low-power-presence-detection",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://nxp.com/spdx/374bf535-dd6c-4217-abfe-3eec2bffb3e7",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-package-374bf535-dd6c-4217-abfe-3eec2bffb3e7",
+      "name": "dm-mcxc162-low-power-presence-detection",
+      "versionInfo": "1.0",
+      "licenseConcluded": "(BSD-3-Clause)",
+      "licenseDeclared": "(BSD-3-Clause)",
+      "downloadLocation": "https://github.com/nxp-appcodehub/dm-mcxc162-low-power-presence-detection",
+      "originator": "Organization: NXP",
+      "supplier": "NOASSERTION",
+      "externalRefs": [],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-package-374bf535-dd6c-4217-abfe-3eec2bffb3e7---1ffe6406-89b4-415b-9902-0d6549960424",
+      "name": "ARM-software/CMSIS_6",
+      "versionInfo": "v6.1.0",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "downloadLocation": "NOASSERTION",
+      "originator": "Organization: unknown",
+      "supplier": "NOASSERTION",
+      "externalRefs": [],
+      "filesAnalyzed": false
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-package-374bf535-dd6c-4217-abfe-3eec2bffb3e7"
+    },
+    {
+      "spdxElementId": "SPDXRef-package-374bf535-dd6c-4217-abfe-3eec2bffb3e7",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-package-374bf535-dd6c-4217-abfe-3eec2bffb3e7---1ffe6406-89b4-415b-9902-0d6549960424"
+    }
+  ]
+}
