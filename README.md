@@ -25,10 +25,9 @@ This demo presents the low power presence detection on FRDM‑MCXC162 platform u
 7. [Release Notes](#step7)
 
 ## 1. Software<a name="step1"></a>
-- Download and install [MCUXpresso IDE V25.06 or later](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
-- Download MCU SDK:[SDK_26_06_00_FRDM-MCXC162](https://mcuxpresso.nxp.com/en/welcome)
-- Download the code from Git repository dm-mcxc162-low-power-presence-detection<!--[dm-mcxc162-low-power-presence-detection](https://github.com/nxp-appcodehub/dm-mcxc162-low-power-presence-detection)-->.  
-- MCUXpresso for Visual Studio Code: This example supports MCUXpresso for Visual Studio Code, for more information about how to use Visual Studio Code please refer [here](https://www.nxp.com/design/training/getting-started-with-mcuxpresso-for-visual-studio-code:TIP-GETTING-STARTED-WITH-MCUXPRESSO-FOR-VS-CODE).
+- Download and install [VS Code V1.133 or later](https://code.visualstudio.com/).
+- Download MCUXpresso for VS Code Plugin 26.7.52 or later.
+- Download MCU SDK: [SDK_26_06_00_FRDM-MCXC162](https://mcuxpresso.nxp.com/en/welcome) (Optional)
 
 ## 2. Hardware<a name="step2"></a>
 - FRDM-MCXC162
@@ -50,11 +49,10 @@ This demo presents the low power presence detection on FRDM‑MCXC162 platform u
 4. Select the example, update the name and select the directory where the example will be saved.
 5. Click on the import project and wait some minutes.
 6. Add the toolchain: Arm GNU
-7. Now, the projects of demo should be in projects panel.
-8. Now you should have the “dm-mcxc162-low-power-presence-detection” in your workspace.
-9. Download SparkFun_Qwiic_TMF882X_Arduino_Library from Github
+7. Now you should have the “mcxc162-low-power-presence-detection” in your projects panel.
+8. Download SparkFun_Qwiic_TMF882X_Arduino_Library from Github
 [sparkfun/SparkFun_Qwiic_TMF882X_Arduino_Library: Arduino Library for SparkFun's Qwiic TMF882X breakout boards ](https://github.com/sparkfun/SparkFun_Qwiic_TMF882X_Arduino_Library)  
-10. Copy following files into project dir TMF882X/
+9. Copy following files into project dir TMF882X/  
 These files are:  
 ```c
 src/tmf882x_clock_correction.c    
@@ -70,7 +68,7 @@ src/intel_hex_interpreter.c
 src/mcu_tmf882x_config.h  
 ```
 
-11. Then copying these files into TMF882X/inc
+10. Then copying these files into TMF882X/inc  
 These files are:  
 ```c
 inc/intel_hex_interpreter.h  
@@ -94,7 +92,7 @@ inc/tmf882x_mode_bl.h
 
 
 
-12. Then modify tmf882x.h in the project，in line 45:
+11. Then modify tmf882x.h in the project，in line 45:
 ```c
 #define TMF882X_MAX_MEAS_RESULTS 36
 ```
@@ -104,7 +102,7 @@ Modify to:
 #define TMF882X_MAX_MEAS_RESULTS 1
 ```
 
-13. Then modify tmf882x_host_interface.h, in line 38
+12. Then modify tmf882x_host_interface.h, in line 38
 ```c
 #include "sfe_shim.h"
 ```
@@ -114,7 +112,7 @@ Modify to:
 #include <tof_driver_adapter.h>
 ```
 
-14. In Project Files CMakeLists.txt, below the following text
+13. In Project Files CMakeLists.txt, below the following text:
 ```c
 add_executable(${MCUX_SDK_PROJECT_NAME}
 ```
@@ -154,29 +152,18 @@ You should add:
 
 
 
-### 3.2 Prepare FRDM and Shield boards
+### 3.2 Prepare FRDM board and Shield boards
 1. Prepare SparkFun Qwiic dToF Imager (TMF8820) and plug into J10 on the board
 2. Prepare MikroE click board OLED B Click and plug into the MikroE onboard socket J5 and J6
 [<p align="left"><img src="./picture/setup.jpg" width="400"/></p>](./picture/setup.jpg)
 
-3. Connect FRDM board to computer with USB-C cable in MCU-Link port of FRDM.
-4. Open MCUXpresso extension in VSCode.
-5. Select the project "dm-mcxc162-low-power-presence-detection".
-6. Do right click on project and select pristine build and wait about a one minute.
-7. Click run (play icon).
-8. Please wait a few seconds.
-9. Now click stop in center upper button.
-
-
 
 ### 3.3 Flash your FRDM board Application
-1. Connect FRDM board to computer with USB-C cable in MCU-Link port of FRDM.
-2. Open MCUXpresso extension in VSCode.
-3. Select the project "dm-mcxc162-low-power-presence-detection".
-4. Do right click on project and select pristine build and wait about a one minute.
-5. Click run (play icon).
-6. Please wait a few seconds.
-7. Now click stop in center upper button.
+1. Do right click on project "mcxc162-low-power-presence-detection" and select pristine build and wait about a one minute.
+2. Click run (play icon).  
+Note:If you are unable to find MCXC162 within your environment after clicking on "Run" or "Play" , please Go to MCUXpresso Installer and software to latest version specifically the Debug Probes, including Linkserver
+3. Please wait a few seconds.
+4. Now click stop in center upper button.
 
 ## 4. Results<a name="step4"></a>
 
