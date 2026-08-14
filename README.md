@@ -13,7 +13,7 @@ This demo presents the low power presence detection on FRDM‑MCXC162 platform u
 #### Boards: FRDM-MCXC162
 #### Categories: HMI
 #### Peripherals: DMA, I2C
-#### Toolchains: MCUXpresso IDE, VS code
+#### Toolchains: MCUXpresso IDE, VS Code
 
 ## Table of Contents
 1. [Software](#step1)
@@ -42,7 +42,7 @@ This demo presents the low power presence detection on FRDM‑MCXC162 platform u
 
 ## 3. Setup<a name="step3"></a>
 ### 3.1 Import project from Application Code Hub
-1. Open VS code, open MCUXpresso for VSCode extension.
+1. Open VS Code, open MCUXpresso for VSCode extension.
 2. In Quick Start Panel window click in Application Code Hub.
 [<p align="left"><img src="./picture/vscode_ach.png" width="400"/></p>]()
 3. In Search text field, type the name of this example "MCXC162 Low Power Presence Detection
@@ -50,7 +50,7 @@ This demo presents the low power presence detection on FRDM‑MCXC162 platform u
 5. Click on the import project and wait some minutes.
 6. Add the toolchain: Arm GNU
 7. Now you should have the “mcxc162-low-power-presence-detection” in your projects panel.
-8. Download SparkFun_Qwiic_TMF882X_Arduino_Library from Github
+8. Download SparkFun_Qwiic_TMF882X_Arduino_Library from GitHub
 [sparkfun/SparkFun_Qwiic_TMF882X_Arduino_Library: Arduino Library for SparkFun's Qwiic TMF882X breakout boards ](https://github.com/sparkfun/SparkFun_Qwiic_TMF882X_Arduino_Library)  
 9. Copy following files into project dir TMF882X/  
 These files are:  
